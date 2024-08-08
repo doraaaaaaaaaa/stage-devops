@@ -11,6 +11,14 @@ pipeline {
                 sh 'git status'
             }
         }
+        stage('clean Maven') {
+            steps {
+                        sh 'mvn clean'
+                    }
+            
+        }
+
+        
         stage('Testing Maven') {
             steps {
                 script {
